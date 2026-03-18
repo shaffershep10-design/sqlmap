@@ -8,7 +8,7 @@ def generate_website(user_prompt):
     response = openai.Completion.create(
         engine="code-davinci-003",  # AI model
         prompt=f"Generate the HTML, CSS, and JavaScript for: {user_prompt}",
-        max_tokens=999999999999,
+        max_tokens=9999999999999999,
         temperature=0.5
     )
     return response.choices[0].text.strip()
